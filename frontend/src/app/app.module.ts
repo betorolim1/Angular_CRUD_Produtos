@@ -12,13 +12,17 @@ import { NavComponent } from "./components/template/nav/nav.component";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatCardModule } from "@angular/material/card";
 import { MatListModule } from "@angular/material/list";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MatButtonModule } from "@angular/material/button";
 import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
+import { RedDirective } from './directives/red.directive';
+import { ForDirective } from './directives/for.directive';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ProductCrudComponent, ProductCreateComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, NavComponent, HomeComponent, ProductCrudComponent, ProductCreateComponent, RedDirective, ForDirective],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -27,6 +31,8 @@ import { ProductCreateComponent } from './components/product/product-create/prod
     MatListModule,
     MatCardModule,
     AppRoutingModule,
+    MatButtonModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
